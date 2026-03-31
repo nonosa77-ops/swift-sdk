@@ -788,7 +788,7 @@ import Logging
             self.isConnected = connected
         }
     }
-    @MainActor final class MainFlag { var flag = false }
+    @MainActor final class MainFlag: @unchecked Sendable { var flag = false }
 
     extension NWError {
         /// Whether this error indicates a connection has been lost or reset.
